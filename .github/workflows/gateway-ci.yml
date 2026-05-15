@@ -1,0 +1,21 @@
+name: Gateway CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  gateway-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test Nginx config
+        run: |
+          docker run --rm --add-host=host.docker.internal:host-gateway \
+            -v "$PWD/nginx/nginx.conf:/etc/nginx/nginx.conf:ro" \
+            -v "$PWD/nginx/conf.d:/etc/nginx/conf.d:ro" \
+            nginx:1.27-alpine nginx -t
