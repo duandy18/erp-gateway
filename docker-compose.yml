@@ -9,4 +9,9 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ../wms-web/dist:/srv/apps/wms:ro
+      - ../pms-web/dist:/srv/apps/pms:ro
+      - ../oms-web/dist:/srv/apps/oms:ro
+      - ../procurement-web/dist:/srv/apps/procurement:ro
+      - ../logistics-web/dist:/srv/apps/logistics:ro
     restart: unless-stopped

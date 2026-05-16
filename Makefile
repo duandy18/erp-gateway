@@ -25,5 +25,16 @@ logs:
 > $(COMPOSE) logs -f erp-gateway
 
 smoke:
+> @for i in $$(seq 1 20); do \
+>   if curl -fsS http://127.0.0.1:7080/healthz >/dev/null 2>/dev/null; then \
+>     echo "gateway healthz OK"; \
+>     break; \
+>   fi; \
+>   if [ "$$i" = "20" ]; then \
+>     echo "gateway healthz FAILED" >&2; \
+>     exit 1; \
+>   fi; \
+>   sleep 0.5; \
+> done
 > curl -fsS http://127.0.0.1:7080/healthz
 > curl -fsS http://127.0.0.1:7080/api/erp/healthz
