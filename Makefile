@@ -51,7 +51,7 @@ apps-build:
 > cd $(WMS_WEB_DIR) && VITE_APP_BASE_PATH=/wms/ VITE_API_BASE_URL=/api/wms $(PNPM) build
 > cd $(PMS_WEB_DIR) && VITE_APP_BASE_PATH=/pms/ VITE_API_BASE_URL=/api/pms $(PNPM) build
 > cd $(OMS_WEB_DIR) && VITE_APP_BASE_PATH=/oms/ VITE_OMS_API_BASE_URL=/api/oms $(PNPM) build
-> cd $(PROCUREMENT_WEB_DIR) && VITE_APP_BASE_PATH=/procurement/ VITE_PROCUREMENT_API_BASE_URL=/api/procurement $(PNPM) build
+> cd $(PROCUREMENT_WEB_DIR) && VITE_APP_BASE_PATH=/procurement/ VITE_API_BASE_URL=/api/procurement $(PNPM) build
 > cd $(LOGISTICS_WEB_DIR) && VITE_APP_BASE_PATH=/logistics/ VITE_API_BASE_URL=/api/logistics $(PNPM) build
 
 full-smoke:

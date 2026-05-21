@@ -43,7 +43,7 @@
 | WMS | `VITE_APP_BASE_PATH=/wms/ VITE_API_BASE_URL=/api/wms pnpm build` |
 | PMS | `VITE_APP_BASE_PATH=/pms/ VITE_API_BASE_URL=/api/pms pnpm build` |
 | OMS | `VITE_APP_BASE_PATH=/oms/ VITE_OMS_API_BASE_URL=/api/oms pnpm build` |
-| Procurement | `VITE_APP_BASE_PATH=/procurement/ VITE_PROCUREMENT_API_BASE_URL=/api/procurement pnpm build` |
+| Procurement | `VITE_APP_BASE_PATH=/procurement/ VITE_API_BASE_URL=/api/procurement pnpm build` |
 | Logistics | `VITE_APP_BASE_PATH=/logistics/ VITE_API_BASE_URL=/api/logistics pnpm build` |
 
 Use this shortcut from `erp-gateway`:
